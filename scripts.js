@@ -387,6 +387,11 @@ function init(){
 
     rlt_end_date = m_year + '-' + (m_month<10?('0'+m_month):m_month) + '-' + (m_day<10?('0'+m_day):m_day)
 
+    week_inc += 6
+    week_inc -= 7
+    day_inc -= 7
+
+    console.log(week_inc)
     $.ajax({
         url: 'fetchdata.php',
         type: 'GET',
